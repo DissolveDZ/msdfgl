@@ -24,5 +24,10 @@ void main() {
     float sigDist = median(s.r, s.g, s.b) - threshold;
     sigDist *= dot(msdfUnit, 0.5/fwidth(coords));
     float opacity = clamp(sigDist + 0.5, 0.0, 1.0);
+<<<<<<< HEAD
     float alpha = smoothstep(0.5, 0.5, opacity); 
     color = mix(vec4(0.0, 0.0, 0.0, 0.0), text_color, alpha);}
+=======
+    color = mix(vec4(0.0, 0.0, 0.0, 0.0), text_color, opacity);
+}
+>>>>>>> 5954ffbc382132ea8fcbdaaaee18a5f12703665d
